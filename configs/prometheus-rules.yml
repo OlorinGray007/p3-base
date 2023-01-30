@@ -79,3 +79,31 @@ spec:
       annotations:
         summary: "1hr success rate too low"
         description: "Planetarium application is experiencing too many status 500 codes in a 1 hour range"
+
+    - alert: BurnRate:2%ErrorBudget
+      expr: (sum(rate(http_server_requests_seconds_count{job="planetarium-clusterip", status=~"5.."}[5m]))/sum(rate(http_server_requests_seconds_count{job="planetarium-clusterip"}[5m])) > 14.4*0.001) and (sum(rate(http_server_requests_seconds_count{job="planetarium-clusterip", status=~"5.."}[1h]))/sum(rate(http_server_requests_seconds_count{job="planetarium-clusterip"}[1h])) >14.4*0.001)
+      labels:
+        severity: page
+      annotations:
+        summary: "Currently on a 2% Burn Rate"
+        description: "Projected to use Error Budget at a burn rate of 2%."
+
+    - alert: BurnRate:5%ErrorBudget
+      expr: (sum(rate(http_server_requests_seconds_count{job="planetarium-clusterip", status=~"5.."}[30m]))/sum(rate(http_server_requests_seconds_count{job="planetarium-clusterip"}[30m])) > 6*0.001) and (sum(rate(http_server_requests_seconds_count{job="planetarium-clusterip", status=~"5.."}[6h]))/sum(rate(http_server_requests_seconds_count{job="planetarium-clusterip"}[6h])) >6*0.001)
+      labels:
+        severity: page
+      annotations:
+        summary: "Currently on a 5% Burn Rate"
+        description: "Projected to use Error Budget at a burn rate of 5%."
+
+    - alert: BurnRate:10%ErrorBudget
+      expr: (sum(rate(http_server_requests_seconds_count{job="planetarium-clusterip", status=~"5.."}[6h]))/sum(rate(http_server_requests_seconds_count{job="planetarium-clusterip"}[6h])) > 1*0.001) and (sum(rate(http_server_requests_seconds_count{job="planetarium-clusterip", status=~"5.."}[3d]))/sum(rate(http_server_requests_seconds_count{job="planetarium-clusterip"}[3d])) >1*0.001)
+      labels:
+        severity: Ticket
+      annotations:
+        summary: "Currently on a 10% Burn Rate"
+        description: "Projected to use Error Budget at a burn rate of 10%."
+
+    
+
+    
