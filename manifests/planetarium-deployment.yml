@@ -17,14 +17,14 @@ spec:
     spec:
       containers:
         - name: "planetarium"
-          image: "esuminski/p3planetarium:base"
+          image: "esuminski/p3planetarium:1"
           env:
           - name: SPRING_DATASOURCE_URL
-            value: 
+            value: jdbc:postgresql://planetarium-p2.cl5napurg4p1.us-west-2.rds.amazonaws.com:5432/postgres
           - name: SPRING_DATASOURCE_USERNAME
-            value: 
+            value: PhoenixLord
           - name: SPRING_DATASOURCE_PASSWORD
-            value: 
+            value: DragonLord48
           imagePullPolicy: "Always"
           ports:
             - containerPort: 8080
