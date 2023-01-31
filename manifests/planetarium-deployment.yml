@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: "planetarium"
-          image: "oloringray007/planetarium:2.5"
+          image: "esuminski/p3planetarium:8.5"
           env:
           - name: SPRING_DATASOURCE_URL
             value: jdbc:postgresql://planetarium-p2.cl5napurg4p1.us-west-2.rds.amazonaws.com:5432/postgres
