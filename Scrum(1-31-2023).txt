@@ -1,0 +1,4 @@
+Finished Burn Rate implementation
+Started on Alerting
+  - Got test connection to emails working
+  - Having issues with alerts not being sent to emails
