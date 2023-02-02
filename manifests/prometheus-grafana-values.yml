@@ -4,6 +4,7 @@ prometheus:
     serviceMonitorSelector:
       matchLabels:
         app: planetarium
+        release: prometheus
 
 grafana:
     namespaceOverride: "default"

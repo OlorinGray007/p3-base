@@ -1,0 +1,3 @@
+AlertManager
+  - completed to integrate email to receive alert information
+  - continue working on silence alerts
