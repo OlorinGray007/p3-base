@@ -4,6 +4,7 @@ prometheus:
     serviceMonitorSelector:
       matchLabels:
         app: planetarium
+        app: prometheus
         release: prometheus
 
 grafana:
