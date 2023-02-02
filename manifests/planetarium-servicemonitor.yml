@@ -10,7 +10,9 @@ spec:
   selector:
     matchLabels:
       app: planetarium
+      operated-prometheus: "true"
   endpoints:
   - port: http
     path: /actuator/prometheus
     interval: 10s
+      
