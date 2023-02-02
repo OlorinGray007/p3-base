@@ -1,11 +1,11 @@
-prometheus:
-  prometheusSpec: # this tells Prometheus to look for the service monitor/s with the given key/value labels
-    # serviceMonitorNamespaceSelector: {default}
-    serviceMonitorSelector:
-      matchLabels:
-        app: planetarium
-        app: prometheus
-        release: prometheus
+# prometheus:
+#   prometheusSpec: # this tells Prometheus to look for the service monitor/s with the given key/value labels
+#     # serviceMonitorNamespaceSelector: {default}
+#     serviceMonitorSelector:
+#       matchLabels:
+#         app: planetarium
+#         app: prometheus
+#         release: prometheus
 
 grafana:
     namespaceOverride: "default"
