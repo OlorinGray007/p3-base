@@ -1,0 +1,11 @@
+As a recap of yesterday:
+- needed to upgrade helm a few times due to node crash
+- edited to allow cluster metric visibility in grafana
+
+Today:
+- Use for studying
+
+Thinking towards the next sprint:
+- Leaning towards seperating monitoring and base app into different nodes
+- Try getting alerts for cluster metrics
+- other ideas based on how much time we think the first 2 will take
