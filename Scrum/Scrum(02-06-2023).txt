@@ -1,0 +1,5 @@
+This Sprints objectives:
+- Alerts for cluster metrics
+- seperate monitoring tools and app to different nodes
+
+Start on Alerts today, side note that a decent chunk of our work time today is taken up by the Meet and Greet.
