@@ -1,0 +1,6 @@
+Yesterday:
+Completed additional alerting for cluster metrics.
+
+Today:
+Work on seperating monitoring and application to different nodes.
+Deal with any new images we're given and the problems that may arise.
