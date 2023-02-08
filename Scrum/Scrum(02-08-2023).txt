@@ -1,0 +1,7 @@
+Yesterday/Last Workday:
+Implemented Taint/Toleration policies and successfully moved a few metric pods away from the application pods/node.
+ - Ones that were not moved are all created by helm charts, so we need to figure out how to move them
+    - possibly due to helm referencing other repositories to create them, not directly affected by T&T policies we enacted previously
+
+Today: 
+Work on seperating the rest of the pods
