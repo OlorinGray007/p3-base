@@ -1,0 +1,13 @@
+loki:
+  tolerations:
+    - key: "key2"
+      operator: "Equal"
+      value: "value2"
+      effect: "NoSchedule"
+
+promtail:
+  tolerations:
+    - key: "key2"
+      operator: "Equal"
+      value: "value2"
+      effect: "NoSchedule"
