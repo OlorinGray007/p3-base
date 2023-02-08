@@ -9,12 +9,17 @@
 
 grafana:
     namespaceOverride: "default"
+    tolerations:
+      - key: "key2"
+        operator: "Equal"
+        value: "value2"
+        effect: "NoSchedule"
     grafana.ini:
       smtp:
         enabled: "true"
         host: "smtp.gmail.com:465"
         user: "luis13314@gmail.com"
-        password: "sbrzbnqbplyaeblg"
+        password: "yqlqptnoggyajfor"
         skip_verify: "true"
         from_address: "luis13314@gmail.com"
         from_name: "Grafana"
@@ -26,3 +31,41 @@ grafana:
       enabled: true
       path: /grafana
       ingressClassName: nginx
+
+alertmanager:
+  alertmanagerSpec:
+    tolerations:
+      - key: "key2"
+        operator: "Equal"
+        value: "value2"
+        effect: "NoSchedule"
+
+prometheusOperator:
+  admissionWebhooks:
+    patch:
+      tolerations:
+        - key: "key2"
+          operator: "Equal"
+          value: "value2"
+          effect: "NoSchedule"
+  tolerations:
+    - key: "key2"
+      operator: "Equal"
+      value: "value2"
+      effect: "NoSchedule"
+
+prometheus:
+  prometheusSpec:
+    tolerations:
+      - key: "key2"
+        operator: "Equal"
+        value: "value2"
+        effect: "NoSchedule"
+
+thanosRuler:
+  thanosRulerSpec:
+    tolerations:
+      - key: "key2"
+        operator: "Equal"
+        value: "value2"
+        effect: "NoSchedule"
