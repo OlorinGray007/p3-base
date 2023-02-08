@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: "planetarium"
-          image: "esuminski/p3planetarium:8.5"
+          image: "oloringray007/planetarium:8.5"
           env:
           - name: SPRING_DATASOURCE_URL
             value: jdbc:postgresql://planetarium-p2.cl5napurg4p1.us-west-2.rds.amazonaws.com:5432/postgres
@@ -40,6 +40,11 @@ spec:
               mountPath: /logs
             - name: promtail-config
               mountPath: /etc/promtail
+      tolerations:
+        - key: "key1"
+          operator: "Equal"
+          value: "value1"
+          effect: "NoSchedule"
 
       volumes:
         - name: logs
