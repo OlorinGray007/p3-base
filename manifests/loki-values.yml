@@ -7,7 +7,7 @@ loki:
 
 promtail:
   tolerations:
-    - key: "key2"
+    - key: "key1"
       operator: "Equal"
-      value: "value2"
+      value: "value1"
       effect: "NoSchedule"
